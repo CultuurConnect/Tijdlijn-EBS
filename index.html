@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Tijdslijn Bibliotheekportalen</title>
+</head>
+<body>
+<section class="cd-horizontal-timeline">
+	<div class="timeline">
+		<div class="events-wrapper">
+			<div class="events">
+				<ol>
+                <!-- maak hier zoveel items/events aan als die je op je tijdslijn wilt plaatsen. 
+                    * Elk item moet een datum-attribuut hebben volgens het formaat dd/mm/yyyy, ook als je niet naar een specifieke datum verwijst maar een bredere periode, je verzint dan maar een fictieve datum, die is toch niet automatisch zichtbaar
+                    * De tekst tussen de tags is de tekst die op de tijdslijn zelf verschijnt en hou je best kort
+                -->
+					<li><a href="#0" data-date="01/03/2010" class="selected">aanbesteding</a></li>
+					<li><a href="#0" data-date="01/05/2011">gunningsfase</a></li>
+                    <li><a href="#0" data-date="03/07/2014">selectiefase</a></li>
+				</ol>
+
+				<span class="filling-line" aria-hidden="true"></span>
+			</div> <!-- .events -->
+		</div> <!-- .events-wrapper -->
+			
+		<ul class="cd-timeline-navigation">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next">Next</a></li>
+		</ul> <!-- .cd-timeline-navigation -->
+	</div> <!-- .timeline -->
+
+	<div class="events-content">
+		<ol>
+        <!-- Voor elk item dat je hierboven in de lijst hebt aangemaakt moet er 1 blokje zijn net als dit voorbeeld (dit kun je copy-pasten en steeds bewerken):
+            
+		    <li data-date="01/01/2009">
+				<h2>Titel</h2>
+				<em>datum</em>
+				<p>Tekst en nog meer tekst
+                <bullet>een oplijsting</bullet>
+				<br><img class="bottomimg" src="img/header-GOpress-bornem.jpg" />
+				</p>
+			</li>
+		
+        **Let bij het gebruik op deze zaken:**
+        
+        De datum in het data-attribuut MOET EXACT overeenkomen met de datum uit de lijst met tijdlijnitems die eerder in het bestand staat. Er moeten ook exact evenveel items in de twee lijsten staan, anders wordt de tijdslijn niet correct weergegeven.			
+        
+        Het eerste item krijgt ook nog de klasse 'selected' mee.
+        
+        Als je afbeeldingen wilt toevoegen moet je afhankelijk van waar je wilt dat de afbeelding komt te staan de <img> tag positioneren BINNEN de <p> tag.
+        Ik heb daarnaast 3 css-klassen voor afbeeldingen voorzien die samenhangen met de plaatsing, respectievelijk:
+        *bottomimg
+        *rightimg
+        *leftimg
+        
+        Wil je daar van afwijken dan kun je ook extra klasses gaan toevoegen in style.css voor andere afbeeldingen.
+        
+        Door de specifieke code voor deze tijdslijn kun je geen extra lijstjes/bullets met <li> tags toevoegen binnen een item.
+        Dat heb ik opgelost door een extra <bullet> tag te voorzien. Gebruik deze binnen een item als je daar met bullets wilt werken.
+        -->
+		
+			<li class="selected" data-date="01/03/2010">
+				<h2>Aanbesteding commerciële leverancier</h2> 
+				<em>maart 2010</em>
+				<p>	
+					 Dit is de tekst van het eerste item op de tijdslijn. dan pas ik dat een beetje aan
+				</p>
+			</li>
+
+			
+	       <li data-date="01/05/2011">
+				<h2>Gunning</h2>
+				<em>mei 2011</em>
+				<p>Tekst en nog meer tekst
+                <bullet>een oplijsting</bullet>
+                <bullet>nog een oplijsting</bullet>
+				<br><img class="bottomimg" src="img/cultuurconnect%20EBS.jpg" />
+				</p>
+			</li>
+			
+            <li data-date="03/07/2014">
+				<h2>Selectie</h2>
+				<em>juli 2014</em>
+				<p><img class="leftimg" src="img/cultuurconnect%20Gopress%20(klein).jpg" />
+                    Tekst en nog meer tekst
+            
+				
+				</p>
+			</li>
+		
+		</ol>
+	</div> <!-- .events-content -->
+</section>
+	
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
